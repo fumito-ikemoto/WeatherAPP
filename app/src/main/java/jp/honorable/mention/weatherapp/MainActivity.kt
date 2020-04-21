@@ -61,47 +61,41 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun OpenCitySelectDialog() : Boolean{
-        val strList = arrayOf("札幌","東京","大阪", "福岡")
+        val strList = arrayOf("札幌","仙台","さいたま","千葉","東京","横浜", "新潟", "静岡", "名古屋", "京都", "大阪", "神戸", "岡山", "広島", "福岡", "熊本")
         val builder = AlertDialog.Builder(this)
         builder.setTitle("追加したい都市を選択")
             .setItems(strList, {dialog, which ->
                 when(which){
-                    0 -> {
-                        val hokkaido = City()
-                        hokkaido.id = 1
-                        hokkaido.cityName = "札幌"
-                        hokkaido.cityID = "city=016010"
-                        mCityAdapter.cityList.add(hokkaido)
-                        mCityAdapter.notifyDataSetChanged()
-                    }
-                    1 -> {
-                        val tokyo = City()
-                        tokyo.cityName = "東京"
-                        tokyo.cityID = "city=130010"
-                        tokyo.id = 2
-                        mCityAdapter.cityList.add(tokyo)
-                        mCityAdapter.notifyDataSetChanged()
-                    }
-                    2 -> {
-                        val osaka = City()
-                        osaka.id = 3
-                        osaka.cityID = "city=270000"
-                        osaka.cityName = "大阪"
-                        mCityAdapter.cityList.add(osaka)
-                        mCityAdapter.notifyDataSetChanged()
-                    }
-                    3 -> {
-                        val fukuoka = City()
-                        fukuoka.id = 4
-                        fukuoka.cityID = "city=400010"
-                        fukuoka.cityName = "福岡"
-                        mCityAdapter.cityList.add(fukuoka)
-                        mCityAdapter.notifyDataSetChanged()
-                    }
+                    0 -> AddCityToCityList(0,"016010", strList[0])
+                    1 -> AddCityToCityList(1,"040010", strList[1])
+                    2 -> AddCityToCityList(2,"110010", strList[2])
+                    3 -> AddCityToCityList(3,"120010", strList[3])
+                    4 -> AddCityToCityList(4,"130010", strList[4])
+                    5 -> AddCityToCityList(5,"140010", strList[5])
+                    6 -> AddCityToCityList(6,"150010", strList[6])
+                    7 -> AddCityToCityList(7,"220010", strList[7])
+                    8 -> AddCityToCityList(8,"230010", strList[8])
+                    9 -> AddCityToCityList(9,"260010", strList[9])
+                    10 -> AddCityToCityList(10,"270000", strList[10])
+                    11 -> AddCityToCityList(11,"280010", strList[11])
+                    12 -> AddCityToCityList(12,"330010", strList[12])
+                    13 -> AddCityToCityList(13,"340010", strList[13])
+                    14 -> AddCityToCityList(14,"400010", strList[14])
+                    15 -> AddCityToCityList(15,"430010", strList[15])
                 }
 
             }).show()
 
         return  true
+    }
+
+    private fun AddCityToCityList(id : Int, cityID :String, cityName :String)
+    {
+        val city = City()
+        city.id = id
+        city.cityID = "city=" + cityID
+        city.cityName = cityName
+        mCityAdapter.cityList.add(city)
+        mCityAdapter.notifyDataSetChanged()
     }
 }

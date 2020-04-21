@@ -12,16 +12,6 @@
         android:id="@+id/titleTextView"
         ></TextView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dateTextView"
-        ></TextView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/weatherTextView"
-        ></TextView>
+    <include layout="@layout/weather_list"></include>
 
 </LinearLayout>

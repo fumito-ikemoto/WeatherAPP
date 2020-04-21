@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "日付"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "今日"
+            android:layout_gravity="center"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "明日"
+            android:layout_gravity="center"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="明後日"
+            android:layout_gravity="center"
+            ></TextView>
+
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "天気"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "今日のち雨"
+            android:id="@+id/todayWeatherText"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "明日のち雨"
+            android:id="@+id/tomorrowWeatherText"
+            android:layout_marginLeft="20dp"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "明後日は雨"
+            android:id="@+id/dayAfterTommorowWeatherText"
+            android:layout_marginLeft="20dp"
+            >
+        </TextView>
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "最高気温"
+            android:textColor="#ff4500"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "XXX"
+            android:textColor="#ff4500"
+            android:id="@+id/todayMaxCelsius"
+            android:gravity="center_horizontal"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "XXX"
+            android:textColor="#ff4500"
+            android:id="@+id/tomorrowMaxCelsius"
+            android:gravity="center_horizontal"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "XXX"
+            android:textColor="#ff4500"
+            android:id="@+id/dayAfterTomorrowMaxCelsius"
+            android:gravity="center_horizontal"
+            >
+        </TextView>
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "最低気温"
+        android:textColor="#b0c4de"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "XXX"
+            android:textColor="#b0c4de"
+            android:gravity="center_horizontal"
+            android:id="@+id/todayMinCelsius"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "XXX"
+            android:textColor="#b0c4de"
+            android:gravity="center_horizontal"
+            android:id="@+id/tomorrowMinCelsius"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "XXX"
+            android:textColor="#b0c4de"
+            android:gravity="center_horizontal"
+            android:id="@+id/dayAfterMinCelsius"
+            ></TextView>
+
+    </TableRow>
+
+
+</TableLayout>
